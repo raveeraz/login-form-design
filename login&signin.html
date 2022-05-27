@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css1.css">
+    <title>login page</title>
+</head>
+<body>
+    <div class="container">
+        <div class="bluebg">
+            <div class="box signin">
+                <h2>Already Have An Account ?</h2>
+                <button class="signinbtn">Sign in</button>
+            </div>
+            <div class="box signup">
+                <h2>Don't Have An Account ?</h2>
+                <button class="signupbtn">Sign up</button>
+            </div>
+        </div>
+        <div class="formbx">
+            <div class="form signinform">
+                <form action="">
+                    <h3>Sign in</h3>
+                    <input type="text" placeholder="username">
+                    <input type="password" placeholder="password">
+                    <input type="submit" value="Login">
+                    <a href="#" class="forgot">Forgot password</a>
+                </form>
+            </div>
+
+            <div class="form signupform">
+                <form action="">
+                    <h3>Sign up</h3>
+                    <input type="text" placeholder="username">
+                    <input type="email" placeholder="email address">
+                    <input type="password" placeholder="password">
+                    <input type="password" placeholder="confirm password">
+                    <input type="submit" value="register">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const signinbtn = document.querySelector('.signinbtn');
+        const signupbtn = document.querySelector('.signupbtn');
+        const formbx = document.querySelector('.formbx');
+        const body = document.querySelector('body');
+
+        signupbtn.onclick = function(){
+            formbx.classList.add('active')
+            body.classList.add('active')
+        }
+
+        signinbtn.onclick = function(){
+            formbx.classList.remove('active')
+            body.classList.remove('active')
+        }
+    </script>
+</body>
+</html>
